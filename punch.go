@@ -75,9 +75,9 @@ func write(state string, project string) {
 	}
 
 	if state == "o" {
-		fmt.Println("Punched out")
+		fmt.Println("Punched out of", project)
 	} else {
-		fmt.Println("Punched in")
+		fmt.Println("Punched in to", project)
 	}
 
 }
