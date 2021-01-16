@@ -11,4 +11,4 @@ Punched in
 Punched out
 ```
 
-<a href="https://asciinema.org/a/14"><img src="https://asciinema.org/a/14.png" width="836"/></a>
+[![asciicast](https://asciinema.org/a/UiaMFBRPyDM97a2jbd72XRH62.svg)](https://asciinema.org/a/UiaMFBRPyDM97a2jbd72XRH62)
