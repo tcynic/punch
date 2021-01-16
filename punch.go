@@ -74,5 +74,10 @@ func write(state string, project string) {
 		return
 	}
 
-	fmt.Println("Date Saved")
+	if state == "o" {
+		fmt.Println("Punched out")
+	} else {
+		fmt.Println("Punched in")
+	}
+
 }
