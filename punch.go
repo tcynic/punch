@@ -5,6 +5,7 @@ import (
 	"os"
 	"time"
 
+	"github.com/mitchellh/go-homedir"
 	"github.com/thatisuday/commando"
 )
 
@@ -46,6 +47,10 @@ func main() {
 
 func write(state string, project string) {
 
+	// define path
+	path, err := homedir.Dir()
+	timelog := path + "/timelog"
+
 	// Retrieve local Unix Time
 	localTime := time.Now().Local()
 
@@ -53,7 +58,7 @@ func write(state string, project string) {
 	prettyTime := localTime.Format("2006/01/02 15:04:05")
 
 	// Create timelog file
-	log, err := os.OpenFile("timelog", os.O_CREATE|os.O_APPEND|os.O_WRONLY, 0644)
+	log, err := os.OpenFile(timelog, os.O_CREATE|os.O_APPEND|os.O_WRONLY, 0644)
 
 	if err != nil {
 		fmt.Println(err)
