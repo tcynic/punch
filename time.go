@@ -8,6 +8,9 @@ import (
 
 func main() {
 
+	// Define Account
+	account := "Sheetz"
+
 	// Retrieve local Unix Time
 	localTime := time.Now().Local()
 
@@ -22,7 +25,7 @@ func main() {
 	}
 
 	// Print Date to timelog file
-	_, err = fmt.Fprintln(log, prettyTime)
+	_, err = fmt.Fprintln(log, "o", prettyTime, account)
 	if err != nil {
 		fmt.Println(err)
 		log.Close()
